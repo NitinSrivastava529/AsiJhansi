@@ -14,3 +14,24 @@
         </div>
     </div>
 </section><!--======  End Page Hero Section  ======-->
+<section class="renvia-feature_two pt-50 pb-40 overflow-hidden">
+    <div class="container">
+        <div class="row justify-content-center1">
+            @for (item of gallery; track $index) {
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="gallery">
+                    <img id="openModalBtn" (click)="showPhoto(item.path)" class="img-fullwidth" [src]="getUrl(item.path)" style="width:100%;">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <style>
+        .gallery {
+            box-shadow: 1px 2px 12px #ccc;
+            cursor: pointer !important;
+            margin-bottom: 10px;
+        }
+    </style>
+</section><!--======  End Feature Section  ======-->

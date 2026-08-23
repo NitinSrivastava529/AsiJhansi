@@ -1104,7 +1104,7 @@ label {
 
 @media (max-width: 767.98px) {
   .header-navigation .site-branding {
-    max-width: 150px;
+    max-width: 185px;
   }
 }
 
@@ -5891,6 +5891,12 @@ label {
     gap: 10px;
     margin-right: 10px;
   }
+    .d-xs-none{
+    display: none !important;
+  }
+  .blog-standard-wrapper{
+    margin-top: 83px !important;
+  }
 }
 
 .renvia-testimonial_one .renvia-content-box .renvia-counter-box .content h2 .number {
@@ -5917,6 +5923,7 @@ label {
   .renvia-testimonial_one .renvia-content-box .renvia-counter-box .content h2 .symbol {
     font-size: 50px;
   }
+
 }
 
 .renvia-testimonial_two {

@@ -48,7 +48,8 @@ export class Global {
     // AOS
     '/assets/js/plugins/aos.js',
     // Theme
-    '/assets/js/theme.js'
+    '/assets/js/theme.js',
+    '/assets/js/custom.js'
 ];
     for (let i = 0; i < jsArray.length; i++) {
       let node = document.createElement('script');
