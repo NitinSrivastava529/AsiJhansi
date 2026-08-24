@@ -25,16 +25,16 @@ export class Video implements OnInit,AfterViewInit {
     this.GetVideo()
   }
     GetVideo() {
-      var data=[
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-        {path:"sSsw7QPrUk0"},
-      ]
-      this.gallery = data;
+      // var data=[
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      //   {path:"sSsw7QPrUk0"},
+      // ]
+      // this.gallery = data;
     // this._http.get('http://api.bkurashtriyatawadi.in/api/master/GetVideo').subscribe(data => {
     //   this.gallery = data;
     //   console.log(this.gallery) 
