@@ -1,0 +1,88 @@
+  html,
+  body {
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+          background: url(/logo/bg.jpg) ;
+      /* background: linear-gradient(24deg, #ff6600, #fd95506e, #ff670b00); */
+  }
+
+  /* Center wrapper */
+  .login-wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+  }
+ label{
+       display: block;
+    text-align: center;
+  }
+  /* Login Card */
+  .login-card {
+     width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    background: #bd4343bf;
+    box-shadow: -1px 7px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .login-title {
+      font-weight: bold;
+          color: #ff6600;
+      margin-bottom: 10px;
+  }
+
+  .form-label {
+      font-weight: 500;
+  }
+
+  /* Input with icon */
+  .input-group-text {
+     background: #ff572217;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+.input-group {
+    border: 1px solid #fff;
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+  .form-control {
+      border: none;
+      background: #f7f7f7;
+  }
+
+  .form-control:focus {
+      box-shadow: none;
+      background: #fff;
+      border: 1px solid #764ba2;
+  }
+
+  /* Button */
+  .btn-login {
+          background: linear-gradient(247deg, #fe8b3eb0, #ff7518);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+  }
+
+  .btn-login:hover {
+      opacity: 0.9;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline;
+  }

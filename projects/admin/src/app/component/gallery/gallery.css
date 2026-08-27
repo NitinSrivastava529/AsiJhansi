@@ -1,0 +1,25 @@
+.filter {
+    width: 260px;
+    position: absolute;
+    right: 0;
+}
+.table td {
+    padding: 3px 15px;
+    line-height: 1.35;
+}
+.table th {
+    padding: 5px 15px;
+    line-height: 1.35;
+}
+.w1{
+    width: 1%;
+}
+#tblInfo td{
+    padding: 4px 10px;
+}
+.list-item {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 3px;
+      margin-top: 7px;
+}

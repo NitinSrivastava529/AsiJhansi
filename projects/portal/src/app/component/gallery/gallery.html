@@ -20,7 +20,7 @@
             @for (item of gallery; track $index) {
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="gallery">
-                    <img id="openModalBtn" (click)="showPhoto(item.path)" class="img-fullwidth" [src]="getUrl(item.path)" style="width:100%;">
+                    <img id="openModalBtn" (click)="getUrl(item.path)" class="img-fullwidth" [src]="getUrl(item.path)" style="width:100%;">
                     <div class="image-overlay"></div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { Global } from '../../config/global';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { config } from 'rxjs';
+import { config } from '../../config/config';
 
 @Component({
   selector: 'app-video',
@@ -25,20 +25,9 @@ export class Video implements OnInit,AfterViewInit {
     this.GetVideo()
   }
     GetVideo() {
-      // var data=[
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      //   {path:"sSsw7QPrUk0"},
-      // ]
-      // this.gallery = data;
-    // this._http.get('http://api.bkurashtriyatawadi.in/api/master/GetVideo').subscribe(data => {
-    //   this.gallery = data;
-    //   console.log(this.gallery) 
-    // });
+      this._http.get(config.API_URL + 'api/master/GetVideo').subscribe(data => {
+          this.gallery = data;
+        });
   }
   getYoutubeUrl(videoId: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(

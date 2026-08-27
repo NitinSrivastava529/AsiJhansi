@@ -2,7 +2,7 @@ import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { Global } from '../../config/global';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-import { config } from 'rxjs';
+import { config } from '../../config/config';
 
 @Component({
   selector: 'app-gallery',
@@ -10,7 +10,7 @@ import { config } from 'rxjs';
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
-export class Gallery implements AfterViewInit,OnInit {
+export class Gallery implements AfterViewInit, OnInit {
   ipPhoto: any;
   largePhoto: any;
   gallery: any
@@ -23,32 +23,20 @@ export class Gallery implements AfterViewInit,OnInit {
 
   }
   ngOnInit(): void {
-     this._global.loadScript()
+    this._global.loadScript()
     this.GetGallery();
   }
   ngAfterViewInit(): void {
-  
+
   }
   GetGallery() {
-      var data=[
-        {path:"JhansiFort.jpg"},      
-        {path:"Chhatari-of-Raja-Gangadhar.jpg"},         
-        {path:"Sahasra-Linga-Chandpur-Lalitpur.jpg"},              
-        {path:"ChaurasiTomb.jpg"},
-           {path:"JhansiFort.jpg"},      
-        {path:"Chhatari-of-Raja-Gangadhar.jpg"},         
-        {path:"Sahasra-Linga-Chandpur-Lalitpur.jpg"},              
-        {path:"ChaurasiTomb.jpg"}       
-      ]
+    this._http.get(config.API_URL + 'api/master/GetGallery').subscribe(data => {
       this.gallery = data;
-    // this._http.get('http://api.bkurashtriyatawadi.in/api/master/GetGallery').subscribe(data => {
-    //   this.gallery = data;
-    //   console.log(this.gallery)
-    // });
+      console.log(this.gallery)
+    });
   }
   getUrl(file: string) {
-    //return this.sanitizer.bypassSecurityTrustResourceUrl('http://api.bkurashtriyatawadi.in/Resource/Gallery/' + file)
-    return this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/' + file)
+    return this.sanitizer.bypassSecurityTrustResourceUrl(config.API_URL + 'Resource/Gallery/' + file)
   }
   showPhoto(url: string) {
     this.IsShowImg = url;

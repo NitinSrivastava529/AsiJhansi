@@ -1,0 +1,70 @@
+.app-sidebar .main-sidebar-header {
+    width: 15rem;
+    height: 4rem;
+    font-size: 20px;
+    color: #FF5722;
+    font-weight: 600;
+}
+@media (max-width: 991.98px) {
+    [data-toggled=close] .app-header .horizontal-logo {
+        display: block;
+           font-size: 20px;
+    color: #FF5722;
+    }
+}
+@media (max-width: 991.98px) {
+    .main-content {
+        margin-top: 21% !important;
+        padding-block-start: 3.75rem;
+    }
+}
+.main-content {
+    margin-top: 5%;
+    padding: 0 .5rem;
+}
+.main-header-dropdown{
+    position: absolute;
+    inset: 0px 0px auto auto;
+    margin: 0px 2px !important;
+    transform: translate3d(0.333333px, 71px, 0px);
+    width: 96%  !important;
+}
+.role {
+    font-size: 16px;
+    background: #FF5722;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: #fff;
+        right: 5%;
+}
+@media (max-width: 767.98px) {
+    .header-element.header-fullscreen {
+        display: block;
+    }
+}
+@media (max-width: 575.98px) {
+    .header-fullscreen, .header-sidebar, .messages-dropdown, .notifications-dropdown, .timelines-dropdown {
+        display: block !important;
+    }
+}
+.app-sidebar .side-menu__item {
+      font-size: 17px;
+    padding-inline-start: 22px;
+    padding-inline-end: 22px;
+    padding-block: 15px;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ff8c67;
+    gap: 17px;
+}
+.app-sidebar .side-menu__label {
+    white-space: nowrap;
+    color: var(--menu-prime-color);
+    position: relative;
+    font-size: 1rem;
+    line-height: 1;
+    vertical-align: middle;
+}
