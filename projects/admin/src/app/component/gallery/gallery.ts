@@ -47,8 +47,41 @@ export class Gallery implements OnInit {
       this.gallery = data;
     });
   }
-  changeFile(event: any) {
-    this.selectedFiles = Array.from(event.target.files);
+changeFile(event: any) {
+    const input = event.target as HTMLInputElement;
+    const files = Array.from(input.files || []) as File[];
+
+    const maxSize = 600 * 1024; // 600 KB
+
+    const allowedTypes = [
+      // Images
+      'image/jpeg',
+      'image/jpg',
+      'image/png',
+      'image/gif'
+    ];
+
+    const invalidFile = files.find(file =>
+      file.size > maxSize || !allowedTypes.includes(file.type)
+    );
+
+    if (invalidFile) {
+      if (invalidFile.size > maxSize) {
+        alert(`${invalidFile.name} must be less than 600 KB.`);
+      } else {
+        alert(`${invalidFile.name} is not a valid file type.`);
+      }
+
+      // Reset input
+      input.value = '';
+
+      // Clear selected files
+      this.selectedFiles = [];
+
+      return;
+    }
+
+    this.selectedFiles = files;
   }
   AddGallery() {
     this._global._loader.next(true)

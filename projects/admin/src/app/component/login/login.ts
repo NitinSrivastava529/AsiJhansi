@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CONFIG } from '../../common/config';
 import { Global } from '../../common/global';
 
 @Component({
