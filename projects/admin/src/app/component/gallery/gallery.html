@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- row opened -->
     <div class="row">
-        <div class="col-md-5 col-lg-5 col-xl-5">
+        <div class="col-md-7 col-lg-7 col-xl-7">
             <div class="card card-table">
                 <div class=" card-header p-0 d-flex justify-content-between">
                     <h4 class="card-title mb-1">Manage Gallery</h4>
@@ -9,15 +9,16 @@
                 </div>
                 <span class="fs-12 text-muted mb-3 ">This is about gallery images.</span>
                 <div class="row g-3">
-                    <div class="section-title mb-3">Upload Photos</div>
+                    <div class="section-title mb-3">Upload Gallery Images</div>
                     <div class="search-card m-0 col-md-12" style="display: flex;">
                         <div class="-" style="margin-left: 10px;">
+                            <input type="text" class="form-control" #name placeholder="Enter Name" [(ngModel)]="AddObject.eventName"/><br>
                             <div class="input-group">
                                 <span class="input-group-text">
                                     <i class="bi bi-camera text-primary-color"></i>
                                 </span>
                                 <input type="file" #fileInput class="form-control" multiple (change)="changeFile($event)" />
-                                <button type="button" class="btn btn-success btn-sm" (click)="AddGallery()">
+                                <button [disabled]="!AddObject.eventName || selectedFiles.length === 0" type="button" class="btn btn-success btn-sm" (click)="AddGallery()">
                                     <i class="bi bi-upload me-2"></i> Upload
                                 </button>
                             </div>
@@ -30,6 +31,7 @@
                             <table class="table table-responsive table-bordered mb-0 text-nowrap">
                                 <thead>
                                     <tr>
+                                        <th class="wd-lg-25p">Name</th>
                                         <th class="wd-lg-25p">Gallery <span style="font-size: 12px; color: red;float: right;">Total :  {{ gallery.length }}</span></th>
                                         <th class="wd-lg-25p w1">Action</th>
                                     </tr>
@@ -37,6 +39,7 @@
                                 <tbody>
                                     @for (item of gallery; track $index) {
                                     <tr>
+                                        <td>{{item.eventName}}</td>
                                         <td><img [src]="getUrl(item.path)" alt="Gallery Image" style="width: 200px; height: 70px;" class="img-fluid" /></td>
                                         <td>
                                             <button class="btn btn-danger btn-sm" (click)="Delete(item.autoId)"><i class="fa fa-trash">&nbsp;</i></button>&nbsp;

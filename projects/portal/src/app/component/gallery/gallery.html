@@ -18,10 +18,15 @@
     <div class="container">
         <div class="row justify-content-center1">
             @for (item of gallery; track $index) {
-            <div class="col-lg-4 col-md-4 col-12">
-                <div class="gallery">
+            <div class="col-lg-4 col-md-4 col-12 renvia-about_two">
+                <div class="gallery renvia-image-box">
                     <img id="openModalBtn" (click)="getUrl(item.path)" class="img-fullwidth" [src]="getUrl(item.path)" style="width:100%;">
                     <div class="image-overlay"></div>
+                    <div class="renvia-content-box">
+                        <div class="content text-center">
+                            <p>{{item.eventName}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             }

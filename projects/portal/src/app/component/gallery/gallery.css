@@ -1,0 +1,16 @@
+.renvia-about_two .renvia-image-box .renvia-content-box {
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    background-color: #ffffffb8;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.renvia-about_two .renvia-image-box .renvia-content-box .content {
+    padding: 6px 12px;
+    border: 1px solid var(--white-color);
+    color: #ff0000;
+    font-weight: 600;
+    border-radius: 10px;
+}

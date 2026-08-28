@@ -23,7 +23,7 @@ export class Gallery implements OnInit {
   AddObject: IGallery = {
     autoId: 0,
     type: 'Photo',
-    eventName: '-',
+    eventName: '',
     path: '-',
     loginId:'Admin',
     creationDate: new Date()
