@@ -39,21 +39,21 @@ export class Global {
   }
   public loadScript() {
     const jsArray = [
-      '/js/jquery.min.js',
-      '/assets/libs/choices.js/public/assets/scripts/choices.min.js',
-      '/assets/libs/@popperjs/core/umd/popper.min.js',
-      '/assets/libs/bootstrap/js/bootstrap.bundle.min.js',
-      '/assets/js/defaultmenu.min.js',
-      // '/assets/libs/node-waves/waves.min.js',
-      '/assets/js/sticky.js',
-      '/assets/libs/simplebar/simplebar.min.js',
-      '/assets/js/simplebar.js',
-      '/assets/libs/@simonwep/pickr/pickr.es5.min.js',
-      // '/assets/libs/apexcharts/apexcharts.min.js'
-      // '/assets/js/index.js',
-      // '/assets/js/custom-switcher.min.js',
-      // '/assets/js/custom.js'
-      '/assets/js/sidemenu.js'
+      './js/jquery.min.js',
+      './assets/libs/choices.js/public/assets/scripts/choices.min.js',
+      './assets/libs/@popperjs/core/umd/popper.min.js',
+      './assets/libs/bootstrap/js/bootstrap.bundle.min.js',
+      './assets/js/defaultmenu.min.js',
+      // './assets/libs/node-waves/waves.min.js',
+      './assets/js/sticky.js',
+      './assets/libs/simplebar/simplebar.min.js',
+      './assets/js/simplebar.js',
+      './assets/libs/@simonwep/pickr/pickr.es5.min.js',
+      // './assets/libs/apexcharts/apexcharts.min.js'
+      // './assets/js/index.js',
+      // './assets/js/custom-switcher.min.js',
+      // './assets/js/custom.js'
+      './assets/js/sidemenu.js'
     ];
     for (let i = 0; i < jsArray.length; i++) {
       let node = document.createElement('script');
