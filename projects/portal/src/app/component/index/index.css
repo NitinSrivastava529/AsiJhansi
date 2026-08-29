@@ -1,0 +1,22 @@
+.news h3{
+    font-size: 18px;
+}
+.news p{
+    font-size: 14px;
+}
+.news a{
+    font-size: 12px;
+}
+.news{
+   margin-top: 26px;
+    /* border-bottom: 1px solid #ddd; */
+    padding: 10px;
+    border-radius: 0px;
+    box-shadow: -6px 4px 20px #f4f4f4;
+}
+marquee{
+    border: 1px double #ffc5c1;
+    height: 300px;
+    padding: 10px;
+    border-radius: 9px;
+}

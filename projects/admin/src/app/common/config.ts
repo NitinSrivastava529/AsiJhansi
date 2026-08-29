@@ -1,5 +1,5 @@
 export const CONFIG={
-    API_URL:window.location.origin.includes('localhost') ? 'http://localhost:5180/' :'http://api.asijhansicircle.com/',
+    API_URL:window.location.origin.includes('localhost1') ? 'http://localhost:5180/' :'http://api.asijhansicircle.com/',
     ROOT_URL:window.location.origin.includes('localhost') ? 'http://localhost:4201/' : window.location.origin+'/',
 } 
 

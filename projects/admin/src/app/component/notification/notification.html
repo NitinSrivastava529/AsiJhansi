@@ -1,1 +1,78 @@
-<p>notification works!</p>
+<div class="container-fluid">
+    <!-- row opened -->
+    <div class="row">
+        <div class="col-md-8 col-lg-8 col-xl-8">
+            <div class="card card-table">
+                <div class=" card-header p-0 d-flex justify-content-between">
+                    <h4 class="card-title mb-1">Manage Notice</h4>
+                    <input type="text" class="form-control filter" placeholder="Search..." />
+                </div>
+                <span class="fs-12 text-muted mb-3 ">This is about Notice.</span>
+                <div class="row g-3">
+                    <div class="section-title mb-3">Upload Notice</div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" #name placeholder="Enter Title" [(ngModel)]="AddObject.title" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" #desc placeholder="Enter Description" [(ngModel)]="AddObject.description" />
+                    </div>
+                    <div class="col-md-6" style="display: flex;">
+                        <div class="-" style="margin-left: 10px;">
+
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-camera text-primary-color"></i>
+                                </span>
+                                <input type="file" #fileInput class="form-control" (change)="changeFile($event)" />
+                                <button [disabled]="this._IsLoading|| !AddObject.title || !AddObject.description || selectedFiles.length === 0" type="button" class="btn btn-success btn-sm" (click)="AddNotice()">
+                                    @if (this._IsLoading) {
+                                    <i class="fa fa-spinner me-2">&nbsp;</i>Uploading...
+                                    }@else {
+                                    <i class="bi bi-upload me-2"></i> Upload
+                                    }
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-sm-6">
+                       <b style="font-size: 15px; color: red;float: right;">Total Count: {{ items.length }}</b>
+                    </div>
+                </div>
+                <div class="row g-3" style="margin-top: 10px;">
+                    <div class="col-sm-12">
+                        <div class="table-responsive country-table" style="max-height: 360px;overflow: auto;">
+                            <table class="table table-responsive table-bordered mb-0 text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th class="wd-lg-25p">Title</th>
+                                        <th class="wd-lg-25p">Description</th>
+                                        <th class="wd-lg-25p w1">File </th>
+                                        <th class="wd-lg-25p w1">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (item of items; track $index) {
+                                    <tr>
+                                        <td>{{ item.title }}</td>
+                                        <td>{{ item.description }}</td>
+                                        <td>
+                                            <a class="btn btn-warning btn-sm" (click)="getUrl(item.path)" target="_blank">
+                                                <i class="fa fa-eye">&nbsp;</i>
+                                            </a>&nbsp;
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" (click)="Delete(item.autoId)">
+                                                <i class="fa fa-trash">&nbsp;</i>
+                                            </button>&nbsp;
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

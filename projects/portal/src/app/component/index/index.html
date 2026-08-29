@@ -23,6 +23,47 @@
                 <!-- Renvia Image Box -->
                 <div class="renvia-image-box mb-5 mb-xl-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="renvia-image">
+                        <img src="https://wysetek.com/wp-content/uploads/2025/01/wystek-men-01-1024x745.png" alt="about image">
+                    </div>
+                    <div class="renvia-content-box">
+                        <div class="content text-center text-white">
+                            <p>News And Events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-10">
+                <!-- Renvia Content Box -->
+                <div class="renvia-content-box">
+                    <div class="section-title">
+                        <span class="sub-title" data-aos="fade-up" data-aos-duration="1000">Latest News And Events<img src="assets/images/line2.png" alt="line"></span>
+                        <h2 class="text-anm">Latest News And Events</h2>
+                    </div>
+                    <marquee direction="up" behavior="scroll" loop="" scrollAmount="3">
+                        <ul class="newsList" style="list-style: circle;">
+                            <li *ngFor="let val of item">
+                                <div class="news">
+                                    <h3>{{val.title}}</h3>
+                                    <p>{{val.description}}</p>
+                                    <a href="{{getUrl(val.path)}}" target="_blank" class="btn btn-warning btn-xs">View/Download</a>
+                                    <label style="float: right;color:red;font-size: 12px;">Date : {{val.creationDate| date:'dd-MM-yyyy'}}</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--======  End About Section  ======-->
+<!--======  Start About Section  ======-->
+<section class="renvia-about_two pt-50 pb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-10">
+                <!-- Renvia Image Box -->
+                <div class="renvia-image-box mb-5 mb-xl-0" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="renvia-image">
                         <img src="assets/images/JhansiFort.jpg" alt="about image">
                     </div>
                     <div class="renvia-content-box">
