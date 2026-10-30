@@ -21,6 +21,7 @@ export class Index implements OnInit {
 
   ngOnInit(): void {
     this._global.loadScript()
+    this._global.loadIndexScript()
     this.GetNotification();
   }
   GetNotification() {

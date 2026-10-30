@@ -26,31 +26,43 @@ export class Global {
   logout() {
     localStorage.clear();
     this._route.navigateByUrl('');
-  }  
+  }
   public loadScript() {
-  const jsArray = [
-    '/assets/js/plugins/jquery-3.7.1.min.js',
-    '/assets/js/plugins/popper.min.js',
-    '/assets/js/plugins/bootstrap.min.js',
-    // GSAP
-    '/assets/js/plugins/gsap/gsap.min.js',
-    '/assets/js/plugins/gsap/SplitText.min.js',
-    '/assets/js/plugins/gsap/ScrollSmoother.min.js',
-    '/assets/js/plugins/gsap/ScrollTrigger.min.js',
-    // Slick
-    '/assets/js/plugins/slick.min.js',
-    // Magnific Popup
-    '/assets/js/plugins/jquery.magnific-popup.min.js',
-    // Waypoints
-    '/assets/js/plugins/jquery.waypoints.js',
-    // CounterUp
-    '/assets/js/plugins/jquery.counterup.min.js',
-    // AOS
-    '/assets/js/plugins/aos.js',
-    // Theme
-    '/assets/js/theme.js',
-    '/assets/js/custom.js'
-];
+    const jsArray = [
+      '/assets/js/plugins/jquery-3.7.1.min.js',
+      '/assets/js/plugins/popper.min.js',
+      '/assets/js/plugins/bootstrap.min.js',
+      // GSAP
+      '/assets/js/plugins/gsap/gsap.min.js',
+      '/assets/js/plugins/gsap/SplitText.min.js',
+      '/assets/js/plugins/gsap/ScrollSmoother.min.js',
+      '/assets/js/plugins/gsap/ScrollTrigger.min.js',
+      // Slick
+      '/assets/js/plugins/slick.min.js',
+      // Magnific Popup
+      '/assets/js/plugins/jquery.magnific-popup.min.js',
+      // Waypoints
+      '/assets/js/plugins/jquery.waypoints.js',
+      // CounterUp
+      '/assets/js/plugins/jquery.counterup.min.js',
+      // AOS
+      '/assets/js/plugins/aos.js',
+      // Theme
+      '/assets/js/theme.js',
+      '/assets/js/custom.js'
+    ];
+    for (let i = 0; i < jsArray.length; i++) {
+      let node = document.createElement('script');
+      node.src = jsArray[i];
+      node.type = 'text/javascript';
+      node.async = false;
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
+  }
+    public loadIndexScript() {
+    const jsArray = [
+      '/assets/js/index.js'
+    ];
     for (let i = 0; i < jsArray.length; i++) {
       let node = document.createElement('script');
       node.src = jsArray[i];
